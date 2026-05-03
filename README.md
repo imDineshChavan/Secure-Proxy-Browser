@@ -12,7 +12,7 @@
 
 | Home Screen | Proxy Working |
 |-------------|---------------|
-| ![Home](screenshots/1.jpg) | ![Proxy](screenshots/2.jpg) |
+| ![Home](screenshots/1.jpg) | ![Proxy](screenshots/2.png) |
 
 ---
 
