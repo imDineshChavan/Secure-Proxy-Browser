@@ -1,25 +1,18 @@
-```markdown
 # 🔒 Secure Proxy Browser
-
-<div align="center">
 
 ![Android](https://img.shields.io/badge/Android-5.0+-green.svg)
 ![Java](https://img.shields.io/badge/Java-8+-red.svg)
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen.svg)
 
-### An Android browser that automatically fetches and applies proxy credentials from a remote server.
-### No manual configuration. Zero settings. Just browse.
-
-</div>
+**An Android browser that automatically fetches and applies proxy credentials from a remote server. No manual configuration. Zero settings. Just browse.**
 
 ---
 
 ## 📱 Screenshots
 
-<div align="center">
-  <img src="screenshots/1.jpg" width="250" alt="Browser Home">
-  <img src="screenshots/2.jpg" width="250" alt="Proxy Working">
-</div>
+| Home Screen | Proxy Working |
+|-------------|---------------|
+| ![Home](screenshots/1.jpg) | ![Proxy](screenshots/2.jpg) |
 
 ---
 
@@ -40,50 +33,32 @@
 
 ## 🛠️ Tech Stack
 
-<div align="center">
-
 | Technology | Purpose |
 |------------|---------|
 | Java | Core programming language |
 | Android SDK | Mobile application framework |
 | WebView | Browser rendering engine |
-| NetCipher | Proxy binding library by Guardian Project |
+| NetCipher | Proxy binding library |
 | REST API | Server communication |
 | JSON | Data exchange format |
-| ExecutorService | Async network operations |
-
-</div>
 
 ---
 
 ## 🔧 How It Works
 
-```
-
-┌─────────────────────────────────────────────────────────┐
-│                                                         │
-│   1. App Starts                                         │
-│         ↓                                               │
-│   2. Fetches proxy from server (IP, Port, User, Pass)   │
-│         ↓                                               │
-│   3. NetCipher binds WebView to the proxy               │
-│         ↓                                               │
-│   4. User enters URL → Traffic routes through proxy     │
-│         ↓                                               │
-│   5. Browse securely & anonymously                      │
-│                                                         │
-└─────────────────────────────────────────────────────────┘
-
-```
+**Step 1:** App Starts
+**Step 2:** Fetches proxy from server (IP, Port, User, Pass)
+**Step 3:** NetCipher binds WebView to the proxy
+**Step 4:** User enters URL → Traffic routes through proxy
+**Step 5:** Browse securely & anonymously
 
 ---
 
 ## 📦 Download Source Code
 
-### Option 1: Direct Download
-Click on `Secure-Proxy-Browser-(src).zip` from the files above and extract.
+**Direct Download:** Click on `Secure-Proxy-Browser-(src).zip` from the files above and extract.
 
-### Option 2: Clone Repository
+**Clone Repository:**
 ```bash
 git clone https://github.com/iamDineshChavan/Secure-Proxy-Browser.git
 ```
@@ -92,17 +67,15 @@ git clone https://github.com/iamDineshChavan/Secure-Proxy-Browser.git
 
 🔑 Server Setup
 
-Create a PHP endpoint that returns JSON response:
-
-PHP Code (proxy.php):
+Create a PHP endpoint proxy.php:
 
 ```php
 <?php
 header('Content-Type: application/json');
 
 $response = [
-    'proxy1_ip' => '45.38.107.97',
-    'proxy1_port' => '6014',
+    'proxy1_ip' => 'your ip',
+    'proxy1_port' => 'port',
     'proxy1_user' => 'your_username',
     'proxy1_pass' => 'your_password'
 ];
@@ -115,10 +88,10 @@ Sample Response:
 
 ```json
 {
-  "proxy1_ip": "45.38.107.97",
-  "proxy1_port": "6014",
-  "proxy1_user": "tjnlwvzk",
-  "proxy1_pass": "bl153f7ry9tp"
+  "proxy1_ip": "ip",
+  "proxy1_port": "port",
+  "proxy1_user": "username",
+  "proxy1_pass": "password"
 }
 ```
 
@@ -126,121 +99,29 @@ Sample Response:
 
 📱 How to Use
 
-1. Install the App
-   · Build APK from source or install directly
-2. Automatic Proxy
-   · App fetches proxy on startup
-   · Status shows "Proxy: Active ✓"
-3. Start Browsing
-   · Enter URL in search bar
-   · Press "Go" button
-   · Use Back/Forward/Refresh buttons
-4. Verify Proxy
-   · Visit ipinfo.io
-   · Check if IP is different from your real IP
-
----
-
-📁 Project Structure
-
-```
-Secure-Proxy-Browser/
-│
-├── Secure-Proxy-Browser-(src).zip    # Complete source code
-├── README.md                          # This file
-│
-├── screenshots/
-│   ├── 1.jpg                          # Browser home screen
-│   └── 2.jpg                          # Proxy working proof
-│
-└── app/
-    └── src/
-        └── main/
-            ├── java/com/secure/browser/
-            │   └── MainActivity.java   # Main browser code
-            └── res/layout/
-                └── main.xml            # UI layout
-```
-
----
-
-⚙️ Requirements
-
-Requirement Minimum
-Android Version 5.0 (Lollipop)
-RAM 2GB
-Internet Required
-Server PHP endpoint for proxy
-
----
-
-🧪 Testing
-
-Tested on:
-
-· ✅ Google Pixel (Android 14)
-· ✅ Samsung Galaxy (Android 13)
-· ✅ OnePlus (Android 12)
-· ✅ Xiaomi (Android 11)
-
----
-
-🤝 Contributing
-
-1. Fork the repository
-2. Create feature branch
-3. Commit changes
-4. Push to branch
-5. Open Pull Request
-
----
-
-📄 License
-
-No License – All rights reserved.
-
-You may:
-
-· View the code
-· Download for personal use
-
-You may NOT:
-
-· Copy or redistribute
-· Use commercially
-· Claim as your own
+1. Install the app
+2. App fetches proxy automatically on startup
+3. Enter URL in search bar
+4. Press "Go" button
+5. Use Back/Forward/Refresh buttons
+6. Visit ipinfo.io to verify proxy IP
 
 ---
 
 👨‍💻 Author
 
-<div align="center">
-
 iamDineshChavan
 
-https://img.shields.io/badge/GitHub-iamDineshChavan-black?logo=github
-
-</div>
+GitHub: https://github.com/iamDineshChavan
 
 ---
 
 ⭐ Show Support
 
-<div align="center">
-
-If this project helped you, please give it a ⭐ on GitHub!
-
-Star this repo → https://github.com/iamDineshChavan/Secure-Proxy-Browser
-
-</div>
+Star this repo: https://github.com/iamDineshChavan/Secure-Proxy-Browser
 
 ---
 
-<div align="center">
+Built with Java | Simple, secure, proxy-enabled browsing for everyone
 
-Built with ☕ and Java
-
-"Simple, secure, proxy-enabled browsing for everyone"
-
-</div>
 ```
